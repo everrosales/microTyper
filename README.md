@@ -107,4 +107,4 @@ Add this to your CSS:
 }
 ```
 
-And put: '<span class="blink">|</span>' in your HTML.
+And put: `<span class="blink">|</span>` in your HTML.
