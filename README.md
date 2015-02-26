@@ -30,7 +30,7 @@ function microTyper(targetId, text, speed, pause, loop) {
 
 ### Watch it in action on *JSFiddle*
 
-Working on making the demo.
+[http://jsfiddle.net/ukha7qur/] (http://jsfiddle.net/ukha7qur/)
 
 ### How to use it?
 
@@ -45,3 +45,66 @@ microTyper takes in five parameters to give you more control over what you are t
 *pause* is the time you want microTyper to wait before deleting and starting to type the next element in the array in milliseconds.
 
 *loop* is a boolean value indicating whether you want microTyper to loop typing or just go through the entire array once. `loop = true` will cause microTyper to cycle through the elements in the array forever.
+
+### Extras
+
+##### Want to add a blinking cursor?
+
+
+Add this to your CSS:
+```
+.blink {
+  -webkit-animation: 1s blink step-end infinite;
+	-moz-animation: 1s blink step-end infinite;
+	-ms-animation: 1s blink step-end infinite;
+	-o-animation: 1s blink step-end infinite;
+	animation: 1s blink step-end infinite;
+}
+
+@keyframes "blink" {
+	from,to {
+	opacity: 0;
+    }
+     50% {
+        opacity: 1;
+     }
+}
+
+@-moz-keyframes blink {
+	from,to {
+	opacity: 0;
+    }
+     50% {
+       opacity: 1;
+     }
+}
+
+@-webkit-keyframes "blink" {
+	from,to {
+	opacity: 0;
+    }
+     50% {
+       opacity: 1;
+     }
+}
+
+@-ms-keyframes "blink" {
+	from,to {
+	opacity: 0;
+    }
+     50% {
+       opacity: 1;
+     }
+}
+
+@-o-keyframes "blink" {
+	from,to {
+	opacity: 0;
+    }
+     50% {
+       opacity: 1;
+     }
+}
+```
+
+And put: '<span class="blink">|</span>' in your HTML.
