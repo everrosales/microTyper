@@ -6,7 +6,7 @@ microTyper is a 20 line Javascript program that allows for an automatic typing e
 
 ### Actual Code
 
-'''
+```
 function microTyperHelper(target, string){
   if(!string) {string=target.innerHTML.substring(0,target.innerHTML.length -1)}
   target.innerHTML = string;
@@ -26,7 +26,7 @@ function microTyper(targetId, text, speed, pause, loop) {
       setTimeout(microTyperHelper, delay, target, text[i].substring(0, j+1));
     } delay += pause; }
   if(loop){setTimeout(microTyper, delay, targetId, text, speed, pause, loop)}}
-'''
+```
 
 ### Watch it in action on *JSFiddle*
 
@@ -38,10 +38,10 @@ microTyper takes in five parameters to give you more control over what you are t
 
 *targetId* is the DOM element who's innerHTML will be typed in. I suggest setting targetId to a span's Id to have in line typing.
 
-*text* is an array of text that you want microTyper to type for you. For example 'text = ["type me first", "type me second", "type me third"]' will first set the target's innerHTML to '"type me first"', delete it, then type '"type me second"' and so forth.
+*text* is an array of text that you want microTyper to type for you. For example `text = ["type me first", "type me second", "type me third"]` will first set the target's innerHTML to `type me first`, delete it, then type `type me second` and so forth.
 
 *speed* is the time between keystrokes. Making this lower will cause microTyper to start to type faster, and vice versa.
 
 *pause* is the time you want microTyper to wait before deleting and starting to type the next element in the array.
 
-*loop* is a boolean value indicating whether you want microTyper to loop typing or just go through the entire array once. 'loop = true' will cause microTyper to cycle through the elements in the array forever.
+*loop* is a boolean value indicating whether you want microTyper to loop typing or just go through the entire array once. `loop = true` will cause microTyper to cycle through the elements in the array forever.
