@@ -4,7 +4,7 @@ function microTyperHelper(target, string){
  }
 function microTyper(targetId, text, speed, pause, loop) {
   target = document.getElementById(targetId);
-  delay = speed;
+  delay = pause;
   for(var i=0;i<text.length;i++) {
    if(target.innerHTML.length != 0 || i != 0) {
    targetLength = i === 0 ? target.innerHTML.length : text[i-1].length;

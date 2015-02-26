@@ -13,7 +13,7 @@ function microTyperHelper(target, string){
  }
 function microTyper(targetId, text, speed, pause, loop) {
   target = document.getElementById(targetId);
-  delay = speed;
+  delay = pause;
   for(var i=0;i<text.length;i++) {
    if(target.innerHTML.length != 0 || i != 0) {
    targetLength = i === 0 ? target.innerHTML.length : text[i-1].length;
@@ -30,7 +30,7 @@ function microTyper(targetId, text, speed, pause, loop) {
 
 ### Watch it in action on *JSFiddle*
 
-[http://jsfiddle.net/ukha7qur/] (http://jsfiddle.net/ukha7qur/)
+[http://jsfiddle.net/ukha7qur/3/] (http://jsfiddle.net/ukha7qur/3/)
 
 ### How to use it?
 
